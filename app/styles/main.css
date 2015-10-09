@@ -1,0 +1,138 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+body {
+  padding: 0;
+  background:#161616;
+}
+/* Custom page header */
+.header {
+  height:120px;
+  background:#FFF;
+  line-height:120px;
+}
+.header .wrap{
+  width:1200px;
+  margin:0 auto;
+  height:100%;
+  text-align:center;
+}
+.header .wrap .cell{
+  display:inline-block;
+}
+.wrap .cell ul, .wrap .cell li{
+  list-style:none;
+}
+.wrap .cell li{
+  display: inline-block;
+  width: 120px;
+  font-size: 14px;
+}
+
+.wrap .cell a{
+  color:#484848;
+  text-decoration:none;
+  transition:all 0.5s;
+}
+
+.wrap .cell a:hover{
+  color:#F00;
+}
+
+.cell.left{
+  text-align:right;
+}
+.cell.center{
+  text-align:center;
+  padding:0 70px;
+}
+.cell.right{
+  text-align:left;
+}
+.circle{
+  border-radius:50%;
+}
+
+.container.third{
+  background:#161616;
+  height:870px;
+  width:100%;
+}
+
+.container.fourth{
+  background:#1E1E1E;
+  height:700px;
+  width:100%;
+}
+
+.container.fifth{
+  background:#000000;
+  height:700px;
+  width:100%;
+}
+.container.sixth{
+  background:#161616;
+  height:700px;
+  width:100%;
+}
+.container.seventh{
+  background:#1E1E1E;
+  height:700px;
+  width:100%;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  background:#FF6E00;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

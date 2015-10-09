@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <header class="header">
+      <nav class="wrap">
+          <div class="cell left">
+            <ul>
+              <li>
+               <a href="#/" title="首页">首页</a>
+              </li>
+              <li>
+                <a href="#/notes" title="学习笔记">学习笔记</a>
+              </li>
+              <li>
+                <a href="#/articles" title="个人文章">个人文章</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cell center">
+            <a href="#/" title="Home"><img class="circle" src="/images/logo.jpg" width="64" height="64"></a>
+          </div>
+           <div class="cell right">
+            <ul>
+              <li>
+                <a href="#/pic" title="个人相册">个人相册</a>
+              </li>
+              <li>
+                <a href="#/about" title="关于我">关于我</a>
+              </li>
+              <li>
+                <a href="#/contract" title="联系我">联系我</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </header>
+
+    <div ng-controller="MapController">
+      <leaflet id='mymap' center="center" height="500px" width="100%" style="background:#CCC;border-bottom:1px solid #ddd;border-top:1px solid #ddd;transition: all 0.5s;"></leaflet>
+    </div>
+
+    <div class="container third">
+      <map>
+        <web-map-service-layer ng-repeat="layer in layers" url="layer.url" layers="layer.layers"></web-map-service-layer>
+            <billboards-layer>
+              <billboard ng-repeat="billboard in billboards"
+                image="billboard.image"
+                color="billboard.color"
+                position="billboard.position"></billboard>
+            </billboards-layer>
+      </map>
+    </div>
+
+    <div class="container fourth">
+    <div ng-view="">
+      
+    </div>
+    </div>
+
+    <div class="container fifth">
+      <div>
+        
+      </div>
+    </div>
+
+    <div class="container sixth">
+      <div>
+        
+      </div>
+    </div>
+
+    <div class="container seventh">
+      <div>
+        
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+    <!--
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
+    <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    -->
+    <script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!--
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    -->
+    <!-- endbuild -->
+</body>
+</html>
