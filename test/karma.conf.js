@@ -27,6 +27,7 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/angular-esri-map/dist/angular-esri-map.js',
       'bower_components/angular-simple-logger/dist/angular-simple-logger.js',
       'bower_components/leaflet/dist/leaflet-src.js',
       'bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js',

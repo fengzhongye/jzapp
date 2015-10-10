@@ -13,6 +13,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="http://localhost/arcgis_js_api/jsapi/esri/css/esri.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
     <!-- endbuild -->
   </head>
@@ -22,7 +23,7 @@
     <![endif]-->
     <!-- Add your site or application content here -->
     <header class="header">
-      <nav class="wrap">
+      <nav class="wrap" ng-controller="HeaderController">
           <div class="cell left">
             <ul>
               <li>
@@ -50,6 +51,9 @@
               <li>
                 <a href="#/contract" title="联系我">联系我</a>
               </li>
+              <li>
+                <button class="btn btn-primary" ng-click="login()">登录</button>
+              </li>
             </ul>
           </div>
       </nav>
@@ -60,15 +64,10 @@
     </div>
 
     <div class="container third">
-      <map>
-        <web-map-service-layer ng-repeat="layer in layers" url="layer.url" layers="layer.layers"></web-map-service-layer>
-            <billboards-layer>
-              <billboard ng-repeat="billboard in billboards"
-                image="billboard.image"
-                color="billboard.color"
-                position="billboard.position"></billboard>
-            </billboards-layer>
-      </map>
+      <esri-map id="map" center="center" zoom="center.zoom" basemap="topo" class="esri-map">
+          <esri-feature-layer url="http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0"></esri-feature-layer>
+          <esri-feature-layer url="http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Parks/FeatureServer/0"></esri-feature-layer>
+      </esri-map>
     </div>
 
     <div class="container fourth">

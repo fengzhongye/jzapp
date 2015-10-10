@@ -2,6 +2,12 @@
 
 require.config({
   paths:{
+    'esri':'http://localhost/arcgis_js_api/jsapi/esri/',
+    'dojo':'http://localhost/arcgis_js_api/jsapi/dojo/',
+    'dijit':'http://localhost/arcgis_js_api/jsapi/dijit/',
+    'dojox':'http://localhost/arcgis_js_api/jsapi/dojox/',
+    'dgrid':'http://localhost/arcgis_js_api/jsapi/dgrid/',
+    'xstyle':'http://localhost/arcgis_js_api/jsapi/xstyle/',
     'angular':'../bower_components/angular/angular',
     'angular-animate':'../bower_components/angular-animate/angular-animate',
     'angular-aria':'../bower_components/angular-aria/angular-aria',
@@ -17,7 +23,7 @@ require.config({
     'jquery':'../bower_components/jquery/dist/jquery',
     'bootstrap':'../bower_components/bootstrap/dist/js/bootstrap',
     'leaflet':'../bower_components/leaflet/dist/leaflet',
-    'angular-cesium':'../bower_components/angular-cesium/dist/angular-cesium',
+    'angular-esri-map':'../bower_components/angular-esri-map/dist/angular-esri-map',
     'domReady':'../bower_components/domReady/domReady'
   },
   shim:{
@@ -68,9 +74,9 @@ require.config({
       deps: ['angular'],
       exports: 'angular-touch'
     },
-    'angular-cesium': {
+    'angular-esri-map': {
       deps: ['angular'],
-      exports: 'angular-cesium'
+      exports: 'angular-esri-map'
     },
     'bootstrap': {
       deps: ['jquery'],
@@ -85,7 +91,7 @@ require.config({
   }
 });
 
-require(['angular', 'leaflet', './controllers/about', './controllers/main', 'domReady!'], function(ng, L){
+require(['angular', 'leaflet', './controllers/header', './controllers/about', './controllers/main', 'domReady!'], function(ng, L){
   window.L = L;
   ng.bootstrap(document, ['myapp']);
 });
